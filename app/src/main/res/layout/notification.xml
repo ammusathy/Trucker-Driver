@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notification_txt_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/message5"
+        android:textSize="@dimen/large" />
+
+
+    <TextView
+        android:id="@+id/notification_txt_sample1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_below="@+id/text2"
+        android:background="@color/gray" />
+
+
+    <TextView
+        android:id="@+id/notification_txt_sample2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text5"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/message5"
+        android:textSize="@dimen/large" />
+
+
+</LinearLayout>

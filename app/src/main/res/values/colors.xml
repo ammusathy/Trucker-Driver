@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE3D32</color>
+    <color name="colorPrimaryDark">#EE3D32</color>
+    <color name="colorAccent">#EE3D32</color>
+    <color name="btnbg">#4D4D4D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blackselect">#ca636161</color>
+    <color name="gray">#E9F0F5</color>
+    <color name="pink">#ecc5c5</color>
+    <color name="lightgray">#F3F3F3</color>
+    <color name="darkgray">#8e8e8e</color>
+    <color name="circleoutergray">#D6DEE3</color>
+    <color name="blue">#003085</color>
+    <color name="green">#1FC96B</color>
+    <color name="redmenu">#eb3348</color>
+    <color name="red">#EE3D32</color>
+    <color name="unselectedred">#ecc5c5</color>
+    <color name="redselect">#c1ee3d32</color>
+    <color name="textcolor">#5F5F5F</color>
+    <color name="lightgreen">#1FC87A</color>
+    <color name="switchGreen">#19fd00</color>
+</resources>
+

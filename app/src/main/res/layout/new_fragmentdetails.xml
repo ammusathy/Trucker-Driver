@@ -1,0 +1,393 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnsource"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/source" />
+
+                        <EditText
+                            android:id="@+id/edittextsource"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:hint="@string/source"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/large" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/darkgray" />
+
+                        <Button
+                            android:id="@+id/btnchangeorder"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/sortby" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btndestination"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/destination" />
+
+                        <EditText
+                            android:id="@+id/edittextdestination"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:hint="@string/destination"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/large" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/texttrucktype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/trucktype"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/large" />
+
+                    <Button
+                        android:id="@+id/btntrucktype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:drawableRight="@drawable/dropdown"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/selecttrucktype"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/large" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <Button
+                            android:id="@+id/btnpickupdate"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1.5"
+                            android:background="@color/gray"
+                            android:drawableLeft="@drawable/icon_calendar"
+                            android:drawablePadding="5dp"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/ddmmyyyy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/large" />
+
+                        <Button
+                            android:id="@+id/btnpickuptime"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@color/gray"
+                            android:drawableLeft="@drawable/icon_alarm"
+                            android:drawablePadding="5dp"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/time"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/large" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkgray" />
+
+                    <TextView
+                        android:id="@+id/textpickupdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/pickupdt"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/large" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkgray" />
+
+                    <TextView
+                        android:id="@+id/textdeliverydate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/deliverydt"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/large" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <Button
+                            android:id="@+id/btndeliverydate"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1.5"
+                            android:background="@color/gray"
+                            android:drawableLeft="@drawable/icon_calendar"
+                            android:drawablePadding="5dp"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/ddmmyyyy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/large" />
+
+                        <Button
+                            android:id="@+id/btndeliverytime"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@color/gray"
+                            android:drawableLeft="@drawable/icon_alarm"
+                            android:drawablePadding="5dp"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/time"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/large" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkgray" />
+
+                    <Button
+                        android:id="@+id/btnadditionalservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableRight="@drawable/add"
+                        android:gravity="left|center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/additionalservices"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/large" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/darkgray" />
+
+
+                    <TextView
+                        android:id="@+id/textnotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/notes"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/large" />
+
+                    <EditText
+                        android:id="@+id/editnotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/gray"
+                        android:maxLines="5"
+                        android:minHeight="40dp"
+                        android:padding="10dp"
+                        android:singleLine="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/red"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/texttotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/total"
+                            android:textColor="@color/white"
+                            android:textSize="30dp" />
+
+                        <TextView
+                            android:id="@+id/textprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$70"
+                            android:textColor="@color/white"
+                            android:textSize="30dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textincludes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="left"
+                        android:text="@string/includes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large" />
+
+
+                    <Button
+                        android:id="@+id/btnviewdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/viewdetails"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnaccept"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/btnbackground"
+                    android:padding="5dp"
+                    android:text="@string/btnaccept"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small" />
+
+                <TextView
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <Button
+                    android:id="@+id/btndecline"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/btnbackground"
+                    android:text="@string/btndecline"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

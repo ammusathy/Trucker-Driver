@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+android {
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LGPL2.1'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId 'driver.com.driver'
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        // API Response Params
+        buildConfigField "String", "STATUS_CODE", '"StatusCode"';
+        buildConfigField "String", "RESPONSE_MSG", '"Message"';
+
+        buildConfigField "String", "USER_TYPE", '"UserType"';
+        buildConfigField "String", "USER_ID", '"UserId"';
+        buildConfigField "String", "AUTH_TOKEN", '"AuthToken"';
+        buildConfigField "String", "REG_ID", '"RegId"';
+
+        // API Response Codes
+        buildConfigField "int", "RESPONSE_SUCCESS", '100';
+        buildConfigField "int", "RESPONSE_SUCCESS_DELETE", '101';
+        buildConfigField "int", "RESPONSE_SUCCESS_ACCEPT", '102';
+        buildConfigField "int", "_ERR_UNAUTHORIZED_TOKEN", '97';
+        buildConfigField "int", "_ERR_NULL_PARAMS", '98';
+        buildConfigField "int", "_ERR_INTERNAL_SERVER", '99';
+        buildConfigField "int", "_ERR_Code_101", '101';
+
+        //Google GCM_ID for push notification
+        buildConfigField "String", "GCM_ID", '"522798368845"';
+
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "IP", '"http://truck.sdiphp.com/public/"');
+        }
+
+        release {
+            buildConfigField("String", "IP", '"http://truck.sdiphp.com/public/"');
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/gcm.jar')
+    compile 'com.squareup.okhttp3:okhttp:3.0.0-RC1'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.google.android.gms:play-services:8.1.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.2'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.flipboard:bottomsheet-core:1.5.0'
+    compile 'com.flipboard:bottomsheet-commons:1.5.0'
+    compile 'com.google.android.gms:play-services:8.4.0'
+}
+

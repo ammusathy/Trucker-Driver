@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">-->
+<LinearLayout
+    android:id="@+id/help_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/help_txt_sampletitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/title"
+        android:textColor="@color/red"
+        android:textSize="@dimen/large"
+        android:textStyle="normal" />
+
+
+    <TextView
+        android:id="@+id/help_txt_samplecontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        android:text="@string/content"
+        android:textSize="@dimen/medium"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/help_txt_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/text2"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/help_txt_sampletitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text5"
+        android:layout_marginLeft="20dp"
+        android:text="@string/title"
+        android:textColor="@color/red"
+        android:textSize="@dimen/large"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/help_txt_samplecontent1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help_txt_sampletitle1"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        android:text="@string/content"
+        android:textSize="@dimen/medium"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/help_txt_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/text4"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/help_txt_sampletitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text6"
+        android:layout_marginLeft="20dp"
+        android:text="@string/title"
+        android:textColor="@color/red"
+        android:textSize="@dimen/large"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/help_txt_samplecontent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help_txt_sampletitle2"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        android:text="@string/content"
+        android:textSize="@dimen/medium"
+        android:textStyle="normal" />
+
+
+    <TextView
+        android:id="@+id/help_txt_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/txt_samplecontent2"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/help_txt_sampletitle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text9"
+        android:layout_marginLeft="20dp"
+        android:text="@string/title"
+        android:textColor="@color/red"
+        android:textSize="@dimen/large"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/help_txt_samplecontent3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help_txt_sampletitle3"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        android:text="@string/content"
+        android:textSize="@dimen/medium"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/help_txt_divider3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/txt_samplecontent3"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/help_txt_sampletitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_divider3"
+        android:layout_marginLeft="20dp"
+        android:text="@string/title"
+        android:textColor="@color/red"
+        android:textSize="@dimen/large"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/help_txt_samplecontent4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help_txt_sampletitle4"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        android:text="@string/content"
+        android:textSize="@dimen/medium"
+        android:textStyle="normal" />
+
+</LinearLayout>
+</LinearLayout>

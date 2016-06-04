@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/bell_icon"
+        android:orderInCategory="100"
+        android:title="@string/notification"
+        app:showAsAction="ifRoom" />
+
+
+   <!-- <item
+        android:id="@+id/dots"
+        android:icon="@drawable/button_switch"
+        android:orderInCategory="100"
+        android:title="@string/notification"
+        app:showAsAction="ifRoom" />-->
+</menu>

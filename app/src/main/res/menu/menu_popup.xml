@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.popmenu.MainActivity" >
+
+    <group  >
+        <item android:id="@+id/change_jobstatus"
+            android:title="Change Job Status" />
+        </group>
+    <group android:id="@+id/group_shipper">
+        <item android:id="@+id/contact_shipper"
+            android:title="Contact Shipper" />
+        </group>
+    <group android:id="@+id/group_editship">
+        <item android:id="@+id/edit_shipment"
+            android:title="Edit shipment" />
+        </group>
+    <group android:id="@+id/group_cancel">
+        <item android:id="@+id/cancel_job"
+            android:title="cancel Job" />
+    </group>
+    <group android:id="@+id/group_canceljob">
+        <item
+            android:id="@+id/cancel"
+            android:title="@string/cancel"/>
+    </group>
+
+
+
+
+</menu>
