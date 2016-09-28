@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/gray"
@@ -9,30 +8,148 @@
     android:orientation="vertical"
     android:padding="@dimen/_10sdp">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/jobs_tabs"
+    <LinearLayout
+        android:id="@+id/relative_current"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/headerLayout"
-        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-        app:tabBackground="@drawable/tab_background"
-        app:tabGravity="fill"
-        app:tabIndicatorColor="@android:color/transparent"
-        app:tabIndicatorHeight="0dp"
-        app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/black" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btn_available"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentRight="true"
+            android:background="@color/red"
+            android:hint="@string/btn_available"
+            android:textColorHint="@color/white"
+            android:layout_weight="3"
+            android:textSize="@dimen/_13sdp"/>
+        <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/view2" />
+      <!--  <Button
+            android:id="@+id/btn_current"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/currentbackground"
+            android:hint="@string/current"
+            android:layout_weight="1.5"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_13sdp"/>-->
+        <Button
+            android:id="@+id/btn_ongoing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/pink"
+            android:hint="@string/ongoing"
+            android:layout_weight="3"
+            android:textSize="@dimen/_13sdp"
+            android:textColorHint="@color/black"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/view2"
+            android:layout_toEndOf="@+id/view2" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/jobs_viewpager"
+
+        <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/view3" />
+
+        <Button
+            android:id="@+id/btn_past"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentRight="true"
+            android:background="@color/pink"
+            android:hint="@string/past"
+            android:layout_weight="3"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_13sdp"/>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/joblist_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_current"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/empty_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/jobs_tabs"
+        android:gravity="center"
+        android:visibility="gone"
         android:background="@color/white"
+        android:textSize="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_below="@+id/relative_current"
+        android:text="@string/no_data_available" />
+    </RelativeLayout>
+
+   <!-- <LinearLayout
+        android:id="@+id/relative_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_new"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/pastbackground1"
+            android:hint="@string/newjob"
+            android:textColorHint="@color/black"
+            android:layout_weight="1.5"
+            android:textSize="@dimen/_13sdp"/>
+
+      <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+          android:id="@+id/view2" />
+        <Button
+            android:id="@+id/btn_ongoing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/pastbackground"
+            android:hint="@string/ongoing"
+            android:textSize="@dimen/_13sdp"
+            android:layout_weight="1.5"
+            android:textColorHint="@color/black"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/view2"
+            android:layout_toEndOf="@+id/view2" />
+    </LinearLayout>
 
 
-</LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/joblist_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_new"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+       android:visibility="gone"
+        android:background="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:layout_below="@+id/relative_new"
+        android:text="@string/no_data_available" />
+
+
+</RelativeLayou-->

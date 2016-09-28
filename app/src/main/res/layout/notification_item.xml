@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="match_parent"
+        android:textColor="#363636"
+        android:text="sdfds"
+        android:textSize="@dimen/_14sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp" />
+
+
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textColor="#f45c43"
+            android:textSize="@dimen/_13sdp"
+            android:text="@string/date" />
+
+
+
+</RelativeLayout>

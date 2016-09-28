@@ -13,8 +13,7 @@ import org.json.JSONObject;
 
 import driver.com.driver.BuildConfig;
 import driver.com.driver.R;
-import driver.com.driver.screens.Login;
-import driver.com.driver.screens.PreferenceConnector;
+import driver.com.driver.login.Login;
 
 public class ResponseErrorCodeHandler {
     public static int _DISMISS_DIALOG_ALONE = 1;

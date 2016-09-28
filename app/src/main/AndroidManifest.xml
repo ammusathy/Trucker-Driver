@@ -12,13 +12,13 @@
     <!-- Camera features - recommended -->
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false" />
+        android:required="true" />
     <uses-feature
         android:name="android.hardware.camera.autofocus"
-        android:required="false" />
+        android:required="true" />
     <uses-feature
         android:name="android.hardware.camera.flash"
-        android:required="false" />
+        android:required="true" />
     <!-- This app has permission to register and receive data message. -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -43,13 +43,20 @@
         android:name="driver.com.driver.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="driver.com.driver.permission.C2D_MESSAGE" />
-
-    <!-- This app has permission to register and receive data message. -->
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <!-- Permission to vibrate -->
     <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Read External Storage. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Write External Storage. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
     <supports-screens
         android:anyDensity="true"
@@ -60,113 +67,157 @@
 
 
     <application
+        android:name=".Application.DriverApplication"
         android:allowBackup="true"
         android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:largeHeap="true"
+        android:launchMode="singleTop"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".screens.CurrentJob"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:name=".splash.SplashScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".screens.Login"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
-        </activity>
         <activity
-            android:name=".screens.VerifyMobileNumber"
+            android:name=".login.Login"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity
-            android:name=".screens.Cancelled"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-
-        <activity
-            android:name=".screens.ForgotPassword"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity
-            android:name=".screens.CreateNewPassword"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity
-            android:name=".screens.ChangeMobileNumber"
-            android:label="@string/app_name"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <activity
-            android:name=".screens.ChangeJobStatus"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-        <activity
-            android:name=".screens.SlidingDrawer"
+            android:name=".login.VerifyMobileNumber"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
 
         </activity>
         <activity
-            android:name=".screens.CropImage"
+            android:name=".login.ChangePassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".jobs.Cancelled"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ViewDetails.ViewDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ViewDetails.CancelViewDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ViewDetails.DeliverViewDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".login.ForgotPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ViewDetails.ApprovedViewDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!-- <activity
+             android:name=".Activity.Deliv"
+             android:label="@string/app_name"
+             android:screenOrientation="portrait">
+
+         </activity>-->
+        <activity
+            android:name=".login.CreateNewPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".jobsfragment.WebViewDisplay"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".notification.Notification"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".login.ChangeMobileNumber"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.SlidingDrawer"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".Activity.CropImage"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".screens.NewJob"
+            android:name=".jobs.NewJob"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
 
         </activity>
         <activity
-            android:name=".screens.AddAdditionalServices"
+            android:name=".jobs.CurrentJob"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
-            </activity>
-     <!--   <activity
-            android:name=".screens.CurrentJob"
-            android:label="@string/app_name"
+            android:largeHeap="true"
             android:screenOrientation="portrait">
 
-        <intent-filter>
+            <!-- <intent-filter>
 
-            <action android:name="android.intent.action.CALL" />
-            <data android:scheme="tel" />
-            <category android:name="android.intent.category.DEFAULT" />
-            <action android:name="android.intent.action.CALL_PRIVILEGED" />
+                 <action android:name="android.intent.action.CALL" />
+                 <data android:scheme="tel" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <action android:name="android.intent.action.CALL_PRIVILEGED" />
 
-        </intent-filter>
-
-        </activity>-->
-          <activity
-              android:name=".screens.DeliveredJob"
-              android:label="@string/app_name"
-              android:screenOrientation="portrait">
-
-          </activity>
-      <!--  <activity
-            android:name=".screens.CreateNewPasswordSetting"
+             </intent-filter>
+     -->
+        </activity>
+        <activity
+            android:name=".jobs.DeliveredJob"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
 
-        </activity>-->
+        </activity>
+        <activity
+            android:name=".ViewDetails.CurrentViewDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
         <receiver
             android:name="com.google.android.gcm.GCMBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND">
@@ -177,19 +228,31 @@
                 <!-- Receives the registration id. -->
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
+                <category android:name="driver.com.app" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--Push notification-->
+        <receiver
+            android:name=".notification.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
                 <category android:name="driver.com.driver" />
             </intent-filter>
         </receiver>
-        <!--
-           <service android:name=".GCMIntentService" />
-           <service android:name=".DialService" />
-           <service android:name=".HeartBeatService" />
-        -->
 
+        <service android:name=".notification.GCMIntentService" />
+        <!-- <meta-data
+             android:name="com.google.android.maps.v2.API_KEY"
+             android:value="AIzaSyBxLtXhkLsE4zCeR9-Ikmk4Je_kQw4nrC4" />-->
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCp9Gk73n1yEiA3MjYv2Fyc1LDIrdkZ-QY" />
 
     </application>
 

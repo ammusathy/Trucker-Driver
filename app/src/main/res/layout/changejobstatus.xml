@@ -5,16 +5,15 @@
     android:layout_centerInParent="true"
     android:orientation="vertical">
 
-    <Button
+    <ImageView
         android:id="@+id/btn_close"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_gravity="right"
-        android:hint="@string/btn_close"
+        android:src="@drawable/closechange"
         android:layout_marginRight="@dimen/_10sdp"
-        android:textColorHint="@color/white"
-        android:background="@color/redmenu"/>
+        android:textColorHint="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +28,7 @@
             android:layout_margin="@dimen/_10sdp"
             android:background="@color/redmenu"
             android:hint="@string/btn_driverenroute"
+            android:textStyle="normal"
             android:textColorHint="@color/white"
             android:textSize="@dimen/_15sdp" />
 
@@ -41,7 +41,8 @@
             android:background="@color/redmenu"
             android:hint="@string/btn_driver_arriving"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"/>
 
 
         <Button
@@ -52,7 +53,8 @@
             android:background="@color/redmenu"
             android:hint="@string/btn_on_transit"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"/>
 
 
         <Button
@@ -63,7 +65,8 @@
             android:background="@color/redmenu"
             android:hint="@string/btn_delivered"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"/>
 
 
         <Button
@@ -74,7 +77,8 @@
             android:background="@color/redmenu"
             android:hint="@string/btn_cancelled"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"/>
 
     </LinearLayout>
 

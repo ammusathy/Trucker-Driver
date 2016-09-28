@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
 <RelativeLayout
+    android:id="@+id/relative_toll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp">
@@ -14,7 +16,8 @@
         android:layout_height="wrap_content"
         android:textColor="@color/red"
         android:text="sdfsdfsdf"
-        android:textSize="@dimen/_18sdp"/>
+        android:textSize="@dimen/_14sdp"/>
+
     <ImageView
         android:id="@+id/image_minus"
         android:layout_width="wrap_content"
@@ -30,6 +33,346 @@
         android:text="sdfsdfsdf"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/add_services_label"
-        android:textSize="@dimen/_15sdp"/>
+        android:textSize="@dimen/_11sdp"/>
+
+    <TextView
+        android:id="@+id/add_services_value1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="sdfsdfsdf"
+        android:textCursorDrawable="@drawable/insertion_point"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/add_services_label"
+        android:textSize="@dimen/_11sdp"/>
 </RelativeLayout>
+
+
+  <!--  <RelativeLayout
+        android:id="@+id/relative_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/add_weightfine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="weight"
+            android:visibility="gone"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/image_minus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/weight_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_weightfine"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/weight_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_weightfine"
+            android:textSize="@dimen/_11sdp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_yard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/add_yardstorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="YardStorage"
+            android:visibility="gone"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/image_minus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/yard_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_yardstorage"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/yard_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_yardstorage"
+            android:textSize="@dimen/_11sdp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_reweigning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/add_reweigning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="Reweigning"
+            android:visibility="gone"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/image_minus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/reweigning_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_reweigning"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/reweigning_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_reweigning"
+            android:textSize="@dimen/_11sdp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_lumper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/add_lumper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="Lumper"
+            android:visibility="gone"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/image_minus4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/lumper_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_lumper"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/lumper_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_lumper"
+            android:textSize="@dimen/_11sdp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/add_power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="Power"
+            android:visibility="gone"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/image_minus5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/power_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_power"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/power_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_power"
+            android:textSize="@dimen/_11sdp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layweek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/add_layweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="LayWeek"
+            android:visibility="gone"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/image_minus6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/layweek_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_layweek"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/layweek_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_layweek"
+            android:textSize="@dimen/_11sdp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_laysolo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/add_laysolo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="LaySolo"
+            android:visibility="gone"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/image_minus7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/laysolo_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_laysolo"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/laysolo_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="sdfsdfsdf"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add_laysolo"
+            android:textSize="@dimen/_11sdp"/>
+    </RelativeLayout>
+
+
+-->
+
 </LinearLayout>

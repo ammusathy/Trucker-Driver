@@ -2,47 +2,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/fragment_scrollview"
+    <ListView
+        android:id="@+id/chat_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_message"
+        android:divider="@drawable/chat_divider"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
 
+    <RelativeLayout
+        android:id="@+id/rl_message"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
 
-        <RelativeLayout
-            android:id="@+id/fragment_rl_message"
+        <ImageView
+            android:id="@+id/fragment_image_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@drawable/imgpsh_fullsize" />
+
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1" />
 
-            <ImageView
-                android:id="@+id/fragment_image_camera"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_50sdp"
-                android:background="@drawable/camera" />
 
-            <EditText
-                android:id="@+id/fragment_et_empty"
-                android:layout_width="@dimen/_190sdp"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/fragment_image_camera"
-                android:layout_marginLeft="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_55sdp"
-                android:background="@drawable/table_row_border" />
+        <EditText
+            android:id="@+id/editText_message"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignBaseline="@+id/txt_send"
+            android:layout_alignBottom="@+id/txt_send"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/table_row_border"
+            android:gravity="center_horizontal"
+            android:hint="@string/type_your_message_here_"
+            android:inputType="text"
+            android:textCursorDrawable="@drawable/insertion"/>
 
-            <TextView
-                android:id="@+id/fragment_txt_send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_60sdp"
-                android:text="@string/send" />
-        </RelativeLayout>
-    </ScrollView>
+        <TextView
+            android:id="@+id/txt_send"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:onClick="onClick"
+            android:text="@string/send"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+<FrameLayout
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
 </RelativeLayout>
 
 

@@ -74,8 +74,8 @@ public ActionCallBack callBack;
                             long id) {
 
         dismiss();
-        Toast.makeText(getActivity(), arrayList.get(position), Toast.LENGTH_SHORT)
-                .show();
+       // Toast.makeText(getActivity(), arrayList.get(position), Toast.LENGTH_SHORT)
+              //  .show();
        if(mSourceString.equalsIgnoreCase("Source")){
            Log.i("SourceSelected",mSourceString);
            DriverApplication.mSelectedSource = position;

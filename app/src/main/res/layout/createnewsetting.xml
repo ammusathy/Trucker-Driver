@@ -23,9 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/newpassword_image_logo"
         android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="@dimen/_15sdp"
         android:layout_marginRight="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_70sdp"
         android:background="@android:color/white"
         android:orientation="vertical">
 
@@ -36,8 +37,10 @@
             android:layout_below="@+id/image_logo"
             android:background="@color/white"
             android:gravity="center"
+            android:textAlignment="center"
             android:padding="@dimen/_10sdp"
-            android:text="@string/createnewpassword"
+            android:textColor="@color/btnbg"
+            android:text="@string/changepassword"
             android:textSize="@dimen/_16sdp"
             android:textStyle="bold" />
         <EditText
@@ -49,12 +52,12 @@
             android:drawableLeft="@drawable/password_icon1"
             android:drawablePadding="@dimen/_10sdp"
             android:gravity="center_vertical"
-            android:hint="@string/newpassword"
+            android:hint="@string/oldpassword"
             android:inputType="textPassword"
             android:padding="@dimen/_10sdp"
+            android:textCursorDrawable="@drawable/insertion_point"
             android:singleLine="true"
             android:textColor="@color/btnbg"
-            android:visibility="gone"
             android:textSize="@dimen/_16sdp" />
 
         <TextView
@@ -75,6 +78,7 @@
             android:hint="@string/newpassword"
             android:inputType="textPassword"
             android:padding="@dimen/_10sdp"
+            android:textCursorDrawable="@drawable/insertion_point"
             android:singleLine="true"
             android:textColor="@color/btnbg"
             android:textSize="@dimen/_16sdp" />
@@ -96,6 +100,7 @@
             android:drawablePadding="@dimen/_10sdp"
             android:gravity="center_vertical"
             android:hint="@string/confirmpassword"
+            android:textCursorDrawable="@drawable/insertion_point"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:padding="@dimen/_10sdp"
@@ -134,11 +139,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/btnbackground"
-        android:padding="@dimen/_15sdp"
+        android:padding="@dimen/_10sdp"
         android:text="@string/settings"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="@dimen/_17sdp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="normal" />
 </RelativeLayout>

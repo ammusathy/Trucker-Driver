@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 android {
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES.txt'
@@ -18,7 +17,7 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId 'driver.com.driver'
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -44,22 +43,27 @@ android {
         buildConfigField "int", "_ERR_Code_101", '101';
 
         //Google GCM_ID for push notification
-        buildConfigField "String", "GCM_ID", '"522798368845"';
+        buildConfigField "String", "GCM_ID", '"543023108033"';
 
     }
     buildTypes {
         debug {
-            buildConfigField("String", "IP", '"http://truck.sdiphp.com/public/"');
+            buildConfigField("String", "IP", '"http://www.etrukr.com/webservice/public/"');
         }
 
         release {
-            buildConfigField("String", "IP", '"http://truck.sdiphp.com/public/"');
+            buildConfigField("String", "IP", '"http://www.etrukr.com/webservice/public/"');
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     productFlavors {
     }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+
 }
 
 dependencies {
@@ -76,8 +80,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     compile 'com.android.volley:volley:1.0.0'
-    compile 'com.flipboard:bottomsheet-core:1.5.0'
-    compile 'com.flipboard:bottomsheet-commons:1.5.0'
     compile 'com.google.android.gms:play-services:8.4.0'
+    compile "com.google.android.gms:play-services:8.3.0"
+    compile 'com.flurry.android:analytics:6.3.1'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.google.android.gms:play-services-location:8.1.0'
+
 }
 

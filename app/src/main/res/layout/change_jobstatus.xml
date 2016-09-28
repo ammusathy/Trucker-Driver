@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+<!--
+    <ImageView
+        android:id="@+id/btn_close1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/closechange"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:textColorHint="@color/white" />
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_10sdp"
+
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/closechange"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textColorHint="@color/white" />
+        <Button
+            android:id="@+id/btn_intransit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/redmenu"
+            android:hint="@string/btn_intransit"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"/>
+
+        <Button
+            android:id="@+id/btn_delivered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/redmenu"
+            android:hint="@string/btn_delivered"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"/>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

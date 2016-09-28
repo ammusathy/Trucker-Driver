@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/toggle_on_"
+        android:state_checked="true"/>
+    <item android:drawable="@drawable/toggle_off_"
+        android:state_checked="false"/>
+</selector>

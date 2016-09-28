@@ -5,7 +5,7 @@
 
     <view
         android:id="@+id/image"
-        class="driver.com.driver.screens.CropImageView"
+        class="driver.com.driver.Activity.CropImageView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_x="0dip"

@@ -17,12 +17,12 @@
         </group>
     <group android:id="@+id/group_cancel">
         <item android:id="@+id/cancel_job"
-            android:title="cancel Job" />
+            android:title="Cancel Job" />
     </group>
     <group android:id="@+id/group_canceljob">
         <item
             android:id="@+id/cancel"
-            android:title="@string/cancel"/>
+            android:title="@string/Cancel" />
     </group>
 
 

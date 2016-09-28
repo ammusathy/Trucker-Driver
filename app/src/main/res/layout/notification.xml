@@ -1,37 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="@dimen/_10sdp"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/gray">
+    <RelativeLayout
+        android:id="@+id/viewdetails_rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/notification_txt_sample"
+        <ImageView
+            android:id="@+id/notification_image_back"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:background="@drawable/backarrow" />
+
+
+        <TextView
+            android:id="@+id/notify_txt_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="bottom"
+            android:text="@string/notification"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large" />
+
+
+    </RelativeLayout>
+
+    <!--<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_10sdp"
-        android:text="@string/message5"
-        android:textSize="@dimen/large" />
-
-
-    <TextView
-        android:id="@+id/notification_txt_sample1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_2sdp"
-        android:layout_below="@+id/text2"
-        android:background="@color/gray" />
-
-
-    <TextView
-        android:id="@+id/notification_txt_sample2"
+        android:text="Current Fragment"
+        android:textSize="@dimen/_20sdp" />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notify_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text5"
-        android:padding="@dimen/_10sdp"
-        android:text="@string/message5"
-        android:textSize="@dimen/large" />
-
-
+        android:background="@color/white"
+      android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+    <TextView
+        android:id="@+id/emptynotify_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:text="@string/no_notify" />
 </LinearLayout>

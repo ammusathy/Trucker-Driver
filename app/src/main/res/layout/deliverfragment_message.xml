@@ -21,16 +21,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_50sdp"
-                android:background="@drawable/camera" />
+                android:background="@drawable/imgpsh_fullsize" />
 
             <EditText
                 android:id="@+id/fragment_et_empty"
                 android:layout_width="@dimen/_190sdp"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/fragment_image_camera"
-                android:layout_marginLeft="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_55sdp"
-                android:background="@drawable/table_row_border" />
+                android:background="@drawable/table_row_border"
+                android:layout_alignTop="@+id/fragment_image_camera"
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:id="@+id/fragment_txt_save"
@@ -39,7 +38,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_55sdp"
                 android:text="@string/send" />
         </RelativeLayout>
     </ScrollView>

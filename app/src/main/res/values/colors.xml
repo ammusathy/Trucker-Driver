@@ -15,11 +15,13 @@
     <color name="blue">#003085</color>
     <color name="green">#1FC96B</color>
     <color name="redmenu">#eb3348</color>
-    <color name="red">#EE3D32</color>
+    <color name="red">#e43d32</color>
     <color name="unselectedred">#ecc5c5</color>
     <color name="redselect">#c1ee3d32</color>
-    <color name="textcolor">#5F5F5F</color>
+    <color name="textcolor">#4D4D4D</color>
     <color name="lightgreen">#1FC87A</color>
     <color name="switchGreen">#19fd00</color>
+    <color name="transparent">@android:color/transparent</color>
+
 </resources>
 

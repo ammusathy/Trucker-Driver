@@ -71,13 +71,7 @@
             android:textStyle="normal" />
 
 
-        <TextView
-            android:id="@+id/aboutus_txt_divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/text_samplecontent2"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:background="@color/gray" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -85,6 +79,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
+      <!--  <TextView
+            android:id="@+id/newjob_txt_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@color/gray" />-->
+
+        <TextView
+            android:id="@+id/aboutus_txt_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/text_samplecontent"
+            android:background="@color/darkgray" />
+
 
         <TextView
             android:id="@+id/aboutus_txt_gettouch"
@@ -96,7 +104,7 @@
             android:text="@string/getintouchwithus"
             android:textColor="@color/red"
             android:textSize="@dimen/large"
-            android:textStyle="normal" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,12 +122,12 @@
                 android:background="@drawable/twitter" />
 
             <ImageView
-                android:id="@+id/aboutus_image_mail"
+                android:id="@+id/aboutus_image_gplus"
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:layout_marginRight="@dimen/_15sdp"
-                android:background="@drawable/gmail" />
+                android:background="@drawable/gplus" />
 
             <ImageView
                 android:id="@+id/aboutus_image_facebook"

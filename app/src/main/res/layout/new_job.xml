@@ -11,78 +11,65 @@
         android:id="@+id/newjob_rl_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/red"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:id="@+id/newjob_image_back"
-            android:layout_width="@dimen/_45sdp"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="@dimen/_2sdp"
-            android:layout_marginTop="@dimen/_1sdp"
-            android:background="@drawable/backarrow" />
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal">
 
 
         <TextView
             android:id="@+id/newjob_txt_newjob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:gravity="bottom"
             android:text="@string/tvnewjobs"
-            android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="@dimen/extralarge" />
+            android:textSize="@dimen/_16sdp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageView
+            android:id="@+id/newjob_image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backarrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/newjob_txt_newjob">
+            android:layout_below="@+id/newjob_txt_newjob"
+          >
 
             <TextView
                 android:id="@+id/newjob_txtorder_newjob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/newjob_txtorder"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="155dp"
-                android:layout_marginStart="155dp"
                 android:text="@string/text1"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="@dimen/extralarge" />
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_125sdp"
+                android:layout_alignBottom="@+id/newjob_txtorder"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/newjob_txtorder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/newjob_txtorder_newjob"
-                android:layout_marginBottom="@dimen/_2sdp"
-                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_2sdp"
                 android:textColor="@color/white"
-                android:textSize="@dimen/extralarge" />
-
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                />
         </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/newjob_btn_bell"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bell_icon"
-            android:gravity="right"
-            android:paddingRight="@dimen/_15sdp"
-            android:layout_alignBottom="@+id/newjob_txt_newjob"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="18dp"
-            android:layout_marginEnd="18dp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -114,6 +101,7 @@
         android:id="@+id/newjob_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/linear_accept_decline"
         android:layout_below="@+id/newjob_rl_details"
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@color/gray">
@@ -129,10 +117,13 @@
                 android:orientation="vertical"
                 android:padding="@dimen/_5sdp">
 
+
                 <LinearLayout
                     android:id="@+id/newjob_ll_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_margin="@dimen/_5sdp"
                     android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="@dimen/_5sdp">
@@ -145,20 +136,20 @@
 
                         <ImageView
                             android:id="@+id/newjob_image_source"
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_30sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/source" />
 
                         <TextView
                             android:id="@+id/newjob_et_source"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:background="@color/white"
                             android:gravity="center_vertical"
                             android:hint="@string/source"
-                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_10sdp"
-                            android:singleLine="true"
+                            android:singleLine="false"
                             android:textColor="@color/textcolor"
                             android:textSize="@dimen/medium" />
                     </LinearLayout>
@@ -179,10 +170,11 @@
 
                         <ImageView
                             android:id="@+id/newjob_image_changeorder"
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_30sdp"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
                             android:background="@drawable/sortby" />
                     </LinearLayout>
+
 
                     <LinearLayout
                         android:id="@+id/newjob_ll_destination"
@@ -192,23 +184,116 @@
 
                         <ImageView
                             android:id="@+id/newjob_image_destination"
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_30sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
                             android:background="@drawable/destination" />
 
                         <TextView
                             android:id="@+id/newjob_et_destination"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
                             android:background="@color/white"
                             android:gravity="center_vertical"
                             android:hint="@string/destination"
-                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_10sdp"
-                            android:singleLine="true"
+                            android:singleLine="false"
                             android:textColor="@color/textcolor"
                             android:textSize="@dimen/medium" />
                     </LinearLayout>
+
+
+                    <!--    <LinearLayout
+                        android:id="@+id/newjob_ll_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:id="@+id/newjob_ll_source"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/newjob_image_source"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:src="@drawable/source" />
+
+                            <TextView
+                                android:id="@+id/newjob_et_source"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:hint="@string/source"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_3sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:singleLine="false"
+                                android:textColor="@color/btnbg"
+                                android:textSize="@dimen/medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/newjob_ll_arrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/newjob_txt_divider"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_weight="1"
+                                android:background="@color/gray" />
+
+                            <ImageView
+                                android:id="@+id/newjob_image_changeorder"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/sortby" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/newjob_ll_destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/newjob_image_destination"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:src="@drawable/destination" />
+
+                            <TextView
+                                android:id="@+id/newjob_et_destination"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:hint="@string/destination"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:singleLine="false"
+                                android:textColor="@color/btnbg"
+                                android:textSize="@dimen/medium" />
+
+                        </LinearLayout>
+    -->
                 </LinearLayout>
 
                 <LinearLayout
@@ -216,6 +301,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_5sdp"
                     android:background="@color/white"
                     android:orientation="vertical">
 
@@ -237,7 +323,7 @@
                         android:drawableRight="@drawable/dropdown"
                         android:gravity="left|center_vertical"
                         android:hint="@string/selecttrucktype"
-                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_5sdp"
                         android:paddingRight="@dimen/_10sdp"
                         android:textAllCaps="false"
                         android:textColor="@color/textcolor"
@@ -274,7 +360,7 @@
                             android:layout_weight="1.5"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_calendar"
-                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawablePadding="@dimen/_8sdp"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_5sdp"
@@ -290,7 +376,7 @@
                             android:layout_weight="1"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_alarm"
-                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawablePadding="@dimen/_8sdp"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_5sdp"
@@ -333,7 +419,7 @@
                             android:layout_weight="1.5"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_calendar"
-                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawablePadding="@dimen/_8sdp"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_5sdp"
@@ -349,7 +435,7 @@
                             android:layout_weight="1"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_alarm"
-                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawablePadding="@dimen/_8sdp"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_5sdp"
@@ -367,17 +453,18 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:background="@color/gray" />
 
+<!--
                     <TextView
                         android:id="@+id/btn_shipperservice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
-                        android:gravity="left|center_vertical"
-                        android:hint="@string/btn_shipperservice"
+                        android:gravity="left"
                         android:padding="@dimen/_5sdp"
+                        android:text="@string/btn_shipperservice"
                         android:textAllCaps="false"
-                        android:textSize="@dimen/medium"
-                        android:textColorHint="@color/btnbg" />
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/medium" />
 
                     <TextView
                         android:id="@+id/newjob_txt_divider11"
@@ -385,8 +472,27 @@
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
+                        android:background="@color/gray" />-->
+                    <TextView
+                        android:id="@+id/newjob_btn_additionalservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/btn_shipperservice"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/medium" />
 
+                    <TextView
+                        android:id="@+id/newjob_txt_divider12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray"
+                        />
 
                     <TextView
                         android:id="@+id/newjob_btn_border"
@@ -398,13 +504,15 @@
                         android:text="@string/border"
                         android:textAllCaps="false"
                         android:textColor="@color/red"
+                        android:visibility="gone"
                         android:textSize="@dimen/medium" />
 
                     <TextView
                         android:id="@+id/txt_border"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/newjob_txt_divider5"
@@ -412,7 +520,8 @@
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/newjob_btn_nostraps"
@@ -424,13 +533,15 @@
                         android:text="@string/noofstraps"
                         android:textAllCaps="false"
                         android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txt_nostraps"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/newjob_txt_divider8"
@@ -438,7 +549,8 @@
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:background="@color/gray" />
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/newjob_btn_stopintransit"
@@ -450,21 +562,84 @@
                         android:text="@string/stopsintransit"
                         android:textAllCaps="false"
                         android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txt_stopintransit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"/>
 
                     <TextView
-                        android:id="@+id/newjob_txt_divider9"
+                        android:id="@+id/newjob_txt_divider15"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
+
+
+                    <TextView
+                        android:id="@+id/newjob_btn_teamservice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/teamservice"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txt_teamservice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/newjob_txt_divider16"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
+
+
+                    <TextView
+                        android:id="@+id/newjob_btn_redelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/redelivery"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txt_redelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/newjob_txt_divider14"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
 
 
                     <TextView
@@ -477,13 +652,15 @@
                         android:text="@string/hazardous"
                         android:textAllCaps="false"
                         android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/txt_hazardousmaterial"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/newjob_txt_divider10"
@@ -491,28 +668,15 @@
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:background="@color/gray" />
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
 
-                    <TextView
-                        android:id="@+id/newjob_btn_additionalservices"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="left|center_vertical"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/additionalservices"
-                        android:textAllCaps="false"
-                        android:textColor="@color/textcolor"
-                        android:textSize="@dimen/medium" />
-
-                    <TextView
-                        android:id="@+id/txt_newjob_divider11"
+               <!--     <TextView
+                        android:id="@+id/txt_newjob_divider20"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:background="@color/gray" />
-
+                        android:layout_marginBottom="@dimen/_10sdp"/>-->
 
                     <TextView
                         android:id="@+id/newjob_txt_notes"
@@ -528,6 +692,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
                         android:background="@color/gray"
                         android:maxLines="5"
                         android:minHeight="@dimen/_35sdp"
@@ -535,112 +700,120 @@
                         android:singleLine="false"
                         android:textColor="@color/textcolor"
                         android:textSize="@dimen/medium" />
-                </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@color/red"
-                    android:orientation="vertical"
-                    android:padding="@dimen/_5sdp">
 
                     <LinearLayout
-                        android:id="@+id/newjob_ll_total"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/red"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:id="@+id/newjob_ll_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/newjob_txt_total"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:text="@string/total"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_25sdp" />
+
+
+                            <TextView
+                                android:id="@+id/newjob_txt_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_60sdp"
+                                android:text="$70"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_25sdp" />
+                        </LinearLayout>
 
                         <TextView
-                            android:id="@+id/newjob_txt_total"
-                            android:layout_width="0dp"
+                            android:id="@+id/newjob_txt_includes"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/total"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="left"
+                            android:text="@string/includes"
+                            android:textAllCaps="false"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_25sdp" />
+                            android:textSize="@dimen/small" />
 
-                        <TextView
-                            android:id="@+id/newjob_txt_price"
-                            android:layout_width="wrap_content"
+
+                        <Button
+                            android:id="@+id/newjob_btn_viewdetails"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="$70"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="right"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:text="@string/viewdetails"
+                            android:textAllCaps="false"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_25sdp" />
+                            android:textSize="@dimen/small" />
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/newjob_txt_includes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:gravity="left"
-                        android:text="@string/includes"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/small" />
-
-
-                    <Button
-                        android:id="@+id/newjob_btn_viewdetails"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:gravity="right"
-                        android:paddingBottom="@dimen/_5sdp"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:text="@string/viewdetails"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/small" />
                 </LinearLayout>
 
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:background="@color/btnbg"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/newjob_btn_accept"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/btnbg"
-                    android:hint="@string/accept"
-                    android:textAllCaps="true"
-                    android:textColorHint="@color/white" />
-
-                <TextView
-                    android:id="@+id/newjob_txt_divider3"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/white"
-                    android:textColor="@color/white" />
-
-                <Button
-                    android:id="@+id/newjob_btn_decline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/btnbg"
-                    android:hint="@string/decline"
-                    android:textColorHint="@color/white" />
-
-
-            </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_accept_decline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/btnbg"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/newjob_btn_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/btnbg"
+            android:hint="@string/accept"
+            android:textAllCaps="true"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/newjob_txt_divider3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/newjob_btn_decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/btnbg"
+            android:hint="@string/decline"
+            android:textColorHint="@color/white" />
+
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/newjob_txt_line"
-        android:layout_width="@dimen/_150sdp"
+        android:layout_width="@dimen/_110sdp"
         android:layout_height="@dimen/_2sdp"
         android:layout_below="@+id/newjob_rl_details"
         android:layout_centerHorizontal="true"

@@ -1,17 +1,77 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@color/gray"
-    android:layout_marginLeft="@dimen/_5sdp"
-    android:layout_marginRight="@dimen/_5sdp"
-    android:layout_marginTop="@dimen/_5sdp">
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
 
+    <!-- <RelativeLayout
+         android:id="@+id/delivered_rl_header"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/red"
+         android:gravity="center_vertical">
+
+
+         <TextView
+             android:id="@+id/delivered_txt_deliveredjobs"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/tvdeliveredjobs"
+             android:textColor="@color/white"
+             android:textSize="@dimen/_18sdp"
+             android:gravity="center_horizontal"
+             android:layout_marginBottom="@dimen/_2sdp"
+             android:layout_centerHorizontal="true" />
+
+
+         <ImageView
+             android:id="@+id/delivered_image_back"
+             android:layout_width="@dimen/_45sdp"
+             android:layout_height="@dimen/_45sdp"
+             android:background="@drawable/backarrow"
+             android:layout_centerVertical="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true" />
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/delivered_txt_deliveredjobs">
+
+             <TextView
+                 android:id="@+id/deliver_txtorder_deliver"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/text1"
+                 android:textAllCaps="true"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/extralarge"
+                 android:gravity="center_horizontal"
+                 android:layout_marginLeft="@dimen/_120sdp"
+                 android:layout_alignBottom="@+id/newjob_txtorder"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentStart="true" />
+
+             <TextView
+                 android:id="@+id/current_txtorder1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/_150sdp"
+                 android:layout_marginBottom="@dimen/_5sdp"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/extralarge"
+                 android:gravity="center"
+                 />
+         </RelativeLayout>
+     </RelativeLayout>-->
 
     <ScrollView
-        android:id="@+id/fragment_scrollview"
+        android:id="@+id/deliver_scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delivered_rl_header"
         android:layout_marginTop="@dimen/_5sdp">
 
         <LinearLayout
@@ -21,12 +81,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="@dimen/_5sdp">
 
                 <LinearLayout
-                    android:id="@+id/fragment_ll_address"
+                    android:id="@+id/deliver_ll_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
@@ -40,110 +100,110 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/fragment_image_source"
-                            android:layout_width="@dimen/_35sdp"
-                            android:layout_height="@dimen/_35sdp"
+                            android:id="@+id/deliver_image_source"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/source" />
 
                         <TextView
-                            android:id="@+id/fragment_et_source"
+                            android:id="@+id/deliver_et_source"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:background="@color/white"
                             android:gravity="center_vertical"
                             android:hint="@string/source"
-                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_8sdp"
                             android:paddingRight="@dimen/_10sdp"
-                            android:singleLine="true"
+                            android:singleLine="false"
                             android:textColor="@color/textcolor"
                             android:textSize="@dimen/medium" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/fragment_ll_doublearrow"
+                        android:id="@+id/deliver_ll_doublearrow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/fragment_txt_divider"
+                            android:id="@+id/deliver_txt_divider"
                             android:layout_width="0dp"
                             android:layout_height="@dimen/_1sdp"
                             android:layout_weight="1"
                             android:background="@color/gray" />
 
                         <ImageView
-                            android:id="@+id/fragment_image_arrow"
+                            android:id="@+id/deliver_image_arrow"
                             android:layout_width="@dimen/_35sdp"
                             android:layout_height="@dimen/_35sdp"
                             android:background="@drawable/sortby" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/fragment_ll_destination"
+                        android:id="@+id/deliver_ll_destination"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/fragment_image_destination"
-                            android:layout_width="@dimen/_35sdp"
-                            android:layout_height="@dimen/_35sdp"
+                            android:id="@+id/deliver_image_destination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
                             android:background="@drawable/destination" />
 
                         <TextView
-                            android:id="@+id/fragment_et_destination"
+                            android:id="@+id/deliver_et_destination"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:background="@color/white"
                             android:gravity="center_vertical"
                             android:hint="@string/destination"
                             android:paddingLeft="@dimen/_10sdp"
                             android:paddingRight="@dimen/_10sdp"
-                            android:singleLine="true"
+                            android:singleLine="false"
                             android:textColor="@color/textcolor"
                             android:textSize="@dimen/medium" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/fragment_ll_trucktype"
+                    android:id="@+id/deliver_ll_trucktype"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:background="@color/white"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/fragment_txt_trucktype"
+                        android:id="@+id/deliver_txt_trucktype"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp"
                         android:text="@string/trucktype"
                         android:textColor="@color/red"
                         android:textSize="@dimen/medium" />
 
 
                     <TextView
-                        android:id="@+id/fragment_btn_trucktype"
+                        android:id="@+id/deliver_btn_trucktype"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:background="@color/white"
                         android:drawableRight="@drawable/dropdown"
                         android:gravity="left|center_vertical"
-                        android:hint="@string/selecttrucktype"
-                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_5sdp"
                         android:paddingRight="@dimen/_10sdp"
+                        android:text="@string/selecttrucktype"
                         android:textAllCaps="false"
                         android:textColor="@color/textcolor"
                         android:textSize="@dimen/medium" />
 
                     <TextView
-                        android:id="@+id/fragment_txt_divider1"
+                        android:id="@+id/deliver_txt_divider1"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
@@ -151,43 +211,58 @@
                         android:background="@color/gray" />
 
                     <TextView
-                        android:id="@+id/fragment_txt_pickupdate"
+                        android:id="@+id/deliver_txt_pickupdate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp"
                         android:text="@string/pickupdt"
                         android:textColor="@color/red"
                         android:textSize="@dimen/medium" />
 
                     <LinearLayout
-                        android:id="@+id/fragment_ll_pickdatetime"
+                        android:id="@+id/deliver_ll_pickdatetime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="@dimen/_5sdp">
 
                         <Button
-                            android:id="@+id/fragment_btn_pickupdate"
+                            android:id="@+id/deliver_btn_pickupdate"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_height="@dimen/_35sdp"
                             android:layout_marginRight="@dimen/_10sdp"
                             android:layout_weight="1.5"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_calendar"
-                            android:drawablePadding="@dimen/_10sdp"
+                            android:drawablePadding="@dimen/_8sdp"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_5sdp"
-                            android:text="@string/ddmmyyyy1"
+                            android:text="@string/ddmmyyyy"
                             android:textAllCaps="false"
                             android:textColor="@color/textcolor"
                             android:textSize="@dimen/medium" />
+                        <!-- <Button
+                             android:id="@+id/deliver_btn_pickupdate"
+                             android:layout_width="0dp"
+                             android:layout_height="@dimen/_40sdp"
+                             android:layout_marginLeft="@dimen/_10sdp"
+                             android:layout_marginRight="@dimen/_10sdp"
+                             android:layout_weight="1.5"
+                             android:background="@color/gray"
+                             android:drawableLeft="@drawable/icon_calendar"
+                             android:drawablePadding="@dimen/_10sdp"
+                             android:gravity="left|center_vertical"
+                             android:paddingLeft="@dimen/_5sdp"
+                             android:paddingRight="@dimen/_5sdp"
+                             android:text="@string/ddmmyyyy1"
+                             android:textAllCaps="false"
+                             android:textColor="@color/textcolor"
+                             android:textSize="@dimen/medium" />-->
 
                         <Button
-                            android:id="@+id/fragment_btn_pickuptime"
+                            android:id="@+id/deliver_btn_pickuptime"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_40sdp"
+                            android:layout_height="@dimen/_35sdp"
                             android:layout_weight="1"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_alarm"
@@ -203,7 +278,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/fragment_txt_divider2"
+                        android:id="@+id/deliver_txt_divider2"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
@@ -212,43 +287,58 @@
 
 
                     <TextView
-                        android:id="@+id/fragment_txt_deliverydate"
+                        android:id="@+id/deliver_txt_deliverydate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_5sdp"
                         android:padding="@dimen/_5sdp"
                         android:text="@string/deliverydt"
                         android:textColor="@color/red"
                         android:textSize="@dimen/medium" />
 
                     <LinearLayout
-                        android:id="@+id/fragment_ll_deliverydatetime"
+                        android:id="@+id/deliver_ll_deliverydatetime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_5sdp">
 
                         <Button
-                            android:id="@+id/fragment_btn_deliverydate"
+                            android:id="@+id/deliver_btn_deliverydate"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_15sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
                             android:layout_weight="1.5"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_calendar"
-                            android:drawablePadding="@dimen/_10sdp"
+                            android:drawablePadding="@dimen/_8sdp"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_5sdp"
-                            android:text="@string/ddmmyyyy2"
+                            android:text="@string/ddmmyyyy"
                             android:textAllCaps="false"
                             android:textColor="@color/textcolor"
                             android:textSize="@dimen/medium" />
+                        <!--  <Button
+                              android:id="@+id/deliver_btn_deliverydate"
+                              android:layout_width="0dp"
+                              android:layout_height="@dimen/_40sdp"
+                              android:layout_marginLeft="@dimen/_10sdp"
+                              android:layout_marginRight="@dimen/_15sdp"
+                              android:layout_weight="1.5"
+                              android:background="@color/gray"
+                              android:drawableLeft="@drawable/icon_calendar"
+                              android:drawablePadding="@dimen/_10sdp"
+                              android:gravity="left|center_vertical"
+                              android:paddingLeft="@dimen/_5sdp"
+                              android:paddingRight="@dimen/_5sdp"
+                              android:text="@string/ddmmyyyy2"
+                              android:textAllCaps="false"
+                              android:textColor="@color/textcolor"
+                              android:textSize="@dimen/medium" />-->
 
                         <Button
-                            android:id="@+id/fragment_btn_deliverytime"
+                            android:id="@+id/deliver_btn_deliverytime"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_40sdp"
+                            android:layout_height="@dimen/_35sdp"
                             android:layout_weight="1"
                             android:background="@color/gray"
                             android:drawableLeft="@drawable/icon_alarm"
@@ -261,8 +351,9 @@
                             android:textColor="@color/textcolor"
                             android:textSize="@dimen/medium" />
                     </LinearLayout>
+
                     <TextView
-                        android:id="@+id/newjob_txt_divider6"
+                        android:id="@+id/deliver_txt_divider6"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
@@ -270,139 +361,10 @@
                         android:background="@color/gray" />
 
                     <TextView
-                        android:id="@+id/txt_delivershipper"
+                        android:id="@+id/deliver_btn_additionalservices"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
-                        android:gravity="left|center_vertical"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/btn_shipperservice"
-                        android:textAllCaps="false"
-                        android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
-                    <TextView
-                        android:id="@+id/newjob_txt_divider11"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
-
-                    <TextView
-                        android:id="@+id/deliver_btn_border"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="left|center_vertical"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/border"
-                        android:textAllCaps="false"
-                        android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
-
-                    <TextView
-                        android:id="@+id/txt_border"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
-
-                    <TextView
-                        android:id="@+id/deliver_txt_divider7"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
-
-                    <TextView
-                        android:id="@+id/deliver_btn_nostraps"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="left|center_vertical"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/noofstraps"
-                        android:textAllCaps="false"
-                        android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
-
-                    <TextView
-                        android:id="@+id/txt_nostraps"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
-
-                    <TextView
-                        android:id="@+id/deliver_txt_divider8"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
-
-                    <TextView
-                        android:id="@+id/deliver_btn_stopintransit"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="left|center_vertical"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/stopsintransit"
-                        android:textAllCaps="false"
-                        android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
-
-                    <TextView
-                        android:id="@+id/txt_stopintransit"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
-
-                    <TextView
-                        android:id="@+id/deliver_txt_divider9"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
-
-
-                    <TextView
-                        android:id="@+id/deliver_btn_hazardousmaterial"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="left|center_vertical"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/hazardous"
-                        android:textAllCaps="false"
-                        android:textColor="@color/red"
-                        android:textSize="@dimen/medium" />
-
-                    <TextView
-                        android:id="@+id/txt_hazardousmaterial"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp" />
-
-                    <TextView
-                        android:id="@+id/deliver_txt_divider10"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@color/gray" />
-
-
-
-
-                    <TextView
-                        android:id="@+id/fragment_btn_additionalservices"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:background="@color/white"
-                        android:drawableRight="@drawable/add"
                         android:gravity="left|center_vertical"
                         android:padding="@dimen/_5sdp"
                         android:text="@string/additionalservices"
@@ -412,60 +374,444 @@
 
 
                     <TextView
-                        android:id="@+id/fragment_txt_divider4"
+                        android:id="@+id/deliver_txt_divider4"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:background="@color/gray" />
 
+                    <TextView
+                        android:id="@+id/deliver_btn_tollcharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/Tollcharge"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
 
                     <TextView
-                        android:id="@+id/fragment_txt_notes"
+                        android:id="@+id/txtdeliver_tollcharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider14"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_btn_WeightFine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/WeightFine"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtdeliver_WeightFine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_btn_YardStorage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/YardStorage"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtdeliver_YardStorage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider16"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_btn_Reweighing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/Reweighing"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtdeliver_Reweighing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider17"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_btn_LumperCharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/LumperCharge"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtdeliver_LumperCharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider18"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_btn_PowerUsageHours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/PowerUsageHours"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtdeliver_PowerUsageHours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider19"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_btn_LayOver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/LayOverweekdays"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtdeliver_LayOver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider20"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_btn_LayOversolo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/LayOversolo"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtdeliver_LayOversolo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider25"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_txt_notes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_5sdp"
                         android:padding="@dimen/_5sdp"
                         android:text="@string/notes"
                         android:textColor="@color/red"
                         android:textSize="@dimen/medium" />
-
+                    <!--
+                                        <TextView
+                                            android:id="@+id/deliver_et_notes"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/gray"
+                                            android:maxLines="5"
+                                            android:minHeight="@dimen/_40sdp"
+                                            android:padding="@dimen/_5sdp"
+                                            android:singleLine="false"
+                                            android:textColor="@color/textcolor"
+                                            android:textSize="@dimen/medium" />-->
                     <TextView
-                        android:id="@+id/fragment_et_notes"
+                        android:id="@+id/deliver_et_notes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:background="@color/gray"
                         android:maxLines="5"
-                        android:minHeight="@dimen/_30sdp"
+                        android:minHeight="@dimen/_35sdp"
                         android:padding="@dimen/_5sdp"
                         android:singleLine="false"
                         android:textColor="@color/textcolor"
                         android:textSize="@dimen/medium" />
 
+
                     <TextView
-                        android:id="@+id/fragment_txt_divider5"
+                        android:id="@+id/deliver_txt_divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/deliver_btn_documents"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="left|center_vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/btndocuments"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/medium" />
+
+                        <TextView
+                            android:id="@+id/delivertxt_imageonly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_105sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/txt_imageonly"
+                            android:textColor="@color/red" />
+
+                        <ImageView
+                            android:id="@+id/deliver_documents_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@drawable/add"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider11"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:background="@color/gray" />
 
+
                     <TextView
-                        android:id="@+id/fragment_btn_documents"
+                        android:id="@+id/delivertxt_doc1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_5sdp"
-                        android:background="@color/white"
-                        android:drawableRight="@drawable/add"
-                        android:gravity="left|center_vertical"
-                        android:text="@string/btndocuments"
-                        android:textAllCaps="false"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="left"
                         android:textColor="@color/textcolor"
-                        android:textSize="@dimen/medium" />
+                        android:visibility="gone" />
 
 
 
+                    <TextView
+                        android:id="@+id/deliver_txt_divider12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/delivertxt_doc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="left"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/textcolor"
+                        android:visibility="gone" />
+
+
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider13"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/delivertxt_doc3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="left"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/textcolor"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider21"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/delivertxt_doc4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/textcolor"
+                        android:visibility="gone" />
+
+
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider22"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/delivertxt_doc5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/textcolor"
+                        android:visibility="gone" />
+
+
+
+                    <TextView
+                        android:id="@+id/deliver_txt_divider23"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/gray"
+                        android:visibility="gone" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -474,34 +820,36 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     android:background="@color/red"
                     android:orientation="vertical"
-                    android:padding="@dimen/_5sdp">
+                    android:padding="@dimen/_10sdp">
 
                     <LinearLayout
-                        android:id="@+id/fragment_ll_total"
+                        android:id="@+id/deliver_ll_total"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/fragment_txt_total"
+                            android:id="@+id/deliver_txt_total"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/total"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_25sdp" />
+                            android:textSize="@dimen/_25sdp"
+                            android:textStyle="normal" />
 
                         <TextView
-                            android:id="@+id/fragment_txt_price"
+                            android:id="@+id/deliver_txt_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="$70"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_25sdp" />
+                            android:textSize="@dimen/_25sdp"
+                            android:textStyle="normal" />
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/fragment_txt_includes"
+                        android:id="@+id/deliver_txt_includes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -513,7 +861,7 @@
 
 
                     <Button
-                        android:id="@+id/fragment_btn_viewdetails"
+                        android:id="@+id/deliver_btn_viewdetails"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -528,19 +876,7 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/fragment_btn_close"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:background="@color/black"
-                android:text="@string/close"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="@dimen/medium" />
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

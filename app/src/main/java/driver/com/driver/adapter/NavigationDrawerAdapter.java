@@ -20,9 +20,9 @@ import driver.com.driver.model.GeneralParams.NavDrawerItem;
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();
+    TypedArray icons;
     private LayoutInflater inflater;
     private Context context;
-    TypedArray icons;
 
     public NavigationDrawerAdapter(Context context, List<NavDrawerItem> data) {
         this.context = context;
@@ -46,8 +46,12 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         NavDrawerItem current = data.get(position);
-        holder.title.setText(current.getTitle());
-        holder.title.setCompoundDrawablesWithIntrinsicBounds(icons.getResourceId(position,0), 0, 0, 0);
+        try {
+            holder.title.setText(current.getTitle());
+            holder.title.setCompoundDrawablesWithIntrinsicBounds(icons.getResourceId(position, 0), 0, 0, 0);
+        } catch (Exception e) {
+
+        }
     }
 
     @Override

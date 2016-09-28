@@ -64,6 +64,8 @@
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
                 android:singleLine="true"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@drawable/insertion_point"
                 android:textColor="@color/btnbg"
                 android:textSize="@dimen/_16sdp" />
 
@@ -102,6 +104,8 @@
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:maxLines="20"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@drawable/insertion_point"
                 android:singleLine="true"
                 android:textColor="@color/btnbg"
                 android:textSize="@dimen/_16sdp" />

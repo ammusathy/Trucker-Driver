@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/_45sdp">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+   android:layout_gravity="center"
+    android:padding="@dimen/_10sdp">
+
 
     <TextView
         android:id="@+id/add_additional_label"
@@ -15,16 +15,23 @@
         android:text="@string/add_service"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:textSize="@dimen/_18sdp"/>
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"/>
     <TextView
         android:id="@+id/add_additional_text1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
         android:padding="@dimen/_10sdp"
         android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:imeOptions="actionNext"
+        android:hint="@string/service"
+        android:textCursorDrawable="@drawable/insertion_point"
         android:background="@color/gray"
         android:layout_below="@+id/add_additional_label"/>
+
     <LinearLayout
         android:id="@+id/layout_additional_text2"
         android:layout_width="match_parent"
@@ -34,42 +41,68 @@
         <TextView
             android:id="@+id/add_additional_text2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
             android:padding="@dimen/_10sdp"
             android:textSize="@dimen/_15sdp"
+            android:inputType="number"
+            android:hint="@string/value"
+
+            android:textStyle="bold"
+            android:textCursorDrawable="@drawable/insertion_point"
             android:background="@color/gray" />
+
         <EditText
             android:id="@+id/edit_additional_text2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
             android:padding="@dimen/_10sdp"
-            android:textSize="@dimen/_10sdp"
+            android:textSize="@dimen/_15sdp"
+            android:inputType="number"
+            android:maxLength="4"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
             android:visibility="gone"
+            android:textCursorDrawable="@drawable/insertion_point"
+            android:hint="@string/value1"
+            android:singleLine="true"
+            android:textStyle="bold"
             android:background="@color/gray"/>
-    </LinearLayout>
 
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/layout_additional_text2">
     <Button
         android:id="@+id/btn_ok"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
         android:layout_below="@+id/layout_additional_text2"
         android:background="@color/red"
         android:hint="@string/ok"
+        android:layout_weight="2"
         android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_5sdp"
+        android:textStyle="bold"
         android:textColorHint="@color/white"/>
     <Button
         android:id="@+id/btn_cancel"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
         android:layout_below="@+id/btn_ok"
         android:background="@color/red"
         android:hint="@string/cancel"
+        android:padding="@dimen/_5sdp"
+        android:layout_weight="2"
+        android:textStyle="bold"
         android:textSize="@dimen/_15sdp"
-
         android:textColorHint="@color/white"/>
+    </LinearLayout>
 </RelativeLayout>
-</LinearLayout>

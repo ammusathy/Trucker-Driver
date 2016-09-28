@@ -1,4 +1,5 @@
 package driver.com.driver.constants;
+
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.net.ConnectivityManager;
@@ -12,13 +13,24 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 public class Constant {
 
-    public static int DialCountService = 0;
-    public static int DialCount = IConstant.DialCount;
-    public static int gpsChecker = 0;
-    public static int settingEditFlag = 0;
 
+    public static int settingEditFlag = 0;
+    public static String SENDER_ID = "543023108033";
+    public static String REG_ID = "";
+    public static String email = "";
+    public static String mobileNumber = "";
+    public static String firstName = "";
+    public static String lastName = "";
+    public static String insurance = "";
+    public static String button = "";
+    public static String profilepicture = "";
+    public static String accept;
+    public static double lat;
+    public static double lon;
 
     /* To check the internet connection */
     public static Boolean isConnectingToInternet(Context ctx) {
@@ -103,6 +115,11 @@ public class Constant {
         return sb.toString();
     }
 
+    public static String getTimeStamp() {
+        Calendar c = Calendar.getInstance();
+        return c.getTimeInMillis() + "";
+    }
+
     /*Check Response JSON|JSONARRAY valid|not*/
     public static boolean isJSONValid(String test) {
         try {
@@ -119,12 +136,13 @@ public class Constant {
 
     //Encodes the byte array into base64 string
     public static String encodeImage(byte[] imageByteArray) {
-        return Base64.encodeToString(imageByteArray, Base64.DEFAULT);
+        return Base64.encodeToString(imageByteArray, Base64.NO_WRAP);
     }
 
     //Decodes the base64 string into byte array
     public static byte[] decodeImage(String imageDataString) {
         return Base64.decode(imageDataString, Base64.DEFAULT);
     }
+
 
 }
